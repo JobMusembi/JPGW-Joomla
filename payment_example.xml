@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="j2store" method="upgrade">
+    <name>Example</name>
+    <version>1.0</version>
+    <creationDate>June 2015</creationDate>
+    <author>J2Store</author>
+    <authorEmail>support@j2store.org</authorEmail>
+    <authorUrl>http://www.j2store.org</authorUrl>
+    <copyright>2015 Example Company</copyright>
+    <license>GNU General Public License v3 or later versions</license>
+    <description>Description of your plugin </description>
+
+    <files>
+        <filename plugin="payment_example">payment_example.php</filename>
+        <filename>index.html</filename>
+        <folder>payment_example</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">languages/en-GB.plg_j2store_payment_example.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="display_name" type="text" size="30" default="" label="j2store_plugin_display_name" description="j2store_plugin_display_name_desc"/>
+                <field name="environment" type="radio" default="Sandbox" label="Environment Setup" description="j2store_plugin_environment_description_desc">
+                    <option value="Sandbox">Sandbox</option>
+                    <option value="Production">Production</option>
+                </field>
+                <field name="username" type="text" label="Username" description="This is the username found when you register in Jenga HQ Under view Keys Menu ."/>
+                <field name="password" type="text" label="Password" description="This is the password found when you register in Jenga HQ Under view Keys Menu ."/>
+                <field name="outletCode" type="text" label="Outlet Code" description="This is the outlet code  which identifies your business which you can create in Jenga HQ."/>
+                <field name="merchantName" type="text" label="Merchant Name" description="This is the merchant name assigned to you when you register in Jenga HQ."/>
+                <field name="api_key" type="text" label="API Key" description="This is the api key found when you register in Jenga HQ Under view Keys Menu ."/>
+                <field name="display_image" type="media" label="j2store_plugin_display_image" description="j2store_plugin_display_image_desc"/>
+                <field
+                        name="articleid"
+                        type="text"
+                        size="10"
+                        default=""
+                        label="j2store_thanks_msg"
+                        description="j2store_thanks_msg_desc"
+                />
+
+                <field
+                        name="geozone_id"
+                        type="geozonelist"
+                        default=""
+                        label="J2STORE_GEOZONE"
+                        description="J2STORE_GEOZONE_DESC"
+                        addfieldpath="/administrator/components/com_j2store/models/fields"
+                />
+                <field name="onselection" type="textarea" cols="10" rows="5" default="" label="j2store_on_selection_label" description="j2store_on_selection_desc"/>
+                <field name="onbeforepayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_before_payment_label" description="j2store_on_before_payment_desc"/>
+                <field name="onafterpayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_after_payment_label" description="j2store_on_after_payment_desc"/>
+                <field name="onerrorpayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_error_payment_label" description="j2store_on_error_payment_desc"/>
+                <field name="oncancelpayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_cancel_payment_label" description="j2store_on_cancel_payment_desc"/>
+
+                <field type="spacer" />
+
+                <field name="button_text" type="text" size="50" default="J2STORE_PLACE_ORDER" label="j2store_button_text_label" description="j2store_button_text_desc" />
+
+                <field type="spacer" />
+
+                <field name="debug" type="radio" default="0" label="j2store_debug" description="j2store_debug_desc">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
